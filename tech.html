@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lifetime is a low-cost, open-source solution for cell health testing for second life battery applications." />
+  <meta name="author" content="Lifetime Cambridge" />
+  <meta name="theme-color" content="#363a32" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="192x192" href="images/favicon.png" />
+  <title>Technology – Lifetime Cambridge</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/fonts.css" type="text/css" media="all" />
+  <script src="js/main.js"></script>
+  <meta property="og:title" content="Lifetime Cambridge" />
+  <meta property="og:description" content="Low-cost, open-source solution for cell health testing for second life battery applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lifetimecambridge.co.uk/" />
+  <meta property="og:image" content="https://lifetimecambridge.co.uk/images/lifetime-cambridge.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1080" />
+  <meta name="twitter:title" content="Lifetime Cambridge" />
+  <meta name="twitter:description" content="Low-cost, open-source solution for cell health testing for second life battery applications." />
+  <meta name="twitter:image" content="https://lifetimecambridge.co.uk/images/lifetime-cambridge.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+
+<body class="technology">
+
+  <header>
+    <div class="content">
+      <a id="logo" href="index.html"><img src="images/lifetime-logo.svg" width="201" height="63" alt="Lifetime Cambridge"/></a>
+      <a id="home" href="index.html">Home</a>
+      <a id="impact" href="impact.html">Impact</a>
+      <a id="technology" class="active" href="tech.html">Technology</a>
+      <a id="people" href="people.html">People</a>
+      <a id="contact" href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section id="intro">
+    <div class="content">
+      <h2>Quick links</h2>
+      <div id="tech-links"><a id="link-hardware" href="javascript:scrollToElement(hardware);">Hardware</a><a id="link-software" href="javascript:scrollToElement(software);">Software</a><a id="link-data" href="javascript:scrollToElement(data);">Data&nbsp;platform</a><a id="link-how-to" href="javascript:scrollToElement(howTo);">How&nbsp;to&nbsp;test</a></div>
+    </div>
+  </section>
+
+  <section class="section-with-image darker" id="hardware">
+    <div class="content">
+      <div class="wallpaper wallpaper-before"></div>
+      <div class="pb-10">
+        <h2>Battery testing hardware</h2>
+        <p>Our toolkit can be used to charge and discharge cells to determine their state-of-health. This consists of circuit assembly and case prototyping. If you want to find out which components you need and what you can achieve with the kit, visit our GitHub page.</p>
+        <a href="https://github.com/LifetimeCambridge" class="btn">Hardware repository on GitHub</a>
+        <p class="mt-24">This open-source project is designed to adapt to user needs, using a modular design. Through user testing and feedback we are implementing  new design iterations to our kit. If you want to build your own device, you can learn how to do this through our open-source documentation.</p>
+        <a href="https://github.com/LifetimeCambridge" class="btn">Hardware documentation</a>
+      </div>
+      <div class="wallpaper wallpaper-after"></div>
+    </div>
+  </section>
+
+  <section class="section-with-image light" id="software">
+    <div class="content">
+      <div class="wallpaper"></div>
+      <div class="pb-10">
+        <h2>Battery testing software</h2>
+        <p>The Lifetime application is a companion mobile app for the battery cell diagnostics device. It can connect to the toolkit via the Bluetooth Low Energy (BLE) interface and show the user information about active and past battery tests. The source code, build instructions, and software specification can be found on GitHub.</p>
+        <a href="https://github.com/LifetimeCambridge" class="btn">App repository on GitHub</a>
+        <p class="mt-24">The current version of the application requires Android 9 (API Level 28) or higher, or Apple iOS 12 or higher. The application can be downloaded from the app stores below.</p>
+        <a href="https://github.com/LifetimeCambridge" class="btn">Apple App Store</a>
+        <a href="https://github.com/LifetimeCambridge" class="btn">Google Play</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-with-image darker" id="data-platform">
+    <div class="content">
+      <div class="wallpaper wallpaper-before"></div>
+      <div class="pb-10">
+        <h2>Data platform</h2>
+        <p>Our open-source data is formatted in CSV files that can be used by loading them into the Python-based model. These contain information about current, voltage, and temperature during the charging process of cells. The format is similar to open-access data libraries, such as the <a href="https://data.nasa.gov/dataset/Li-ion-Battery-Aging-Datasets/uj5r-zjdb">NASA</a> and <a href="https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac">Oxford</a> datasets. Click below to access and help us build our dataset.
+        </p>
+        <a href="https://github.com/LifetimeCambridge" class="btn">Download the dataset</a>
+        <p class="mt-24">The technique used is called Incremental capacity analysis (ICA). This method uses data from the <b>charging characteristics</b> of a battery to determine state of health. It is applied to data from <b>constant current</b> (CC) charging, which injects charge into a battery at a constant, pre-defined current, resulting in a voltage change. By comparing the change in charge to the change in voltage for a given battery cell, specific features emerge that can be analysed. By collecting data from a large set of&nbsp;cycling experiments we can estimate a battery’s state of health. If you want to learn more about ICA, you can read the documentation.</p>
+        <a href="https://github.com/LifetimeCambridge" class="btn">ICA documentation</a>
+        <p class="mt-24">Do you want to collect your own data using the device? Here is a quick and easy to follow user guide on how to perform ICA using our device.</p>
+        <a href="https://github.com/LifetimeCambridge" class="btn">Cycling experiment protocol</a>
+      </div>
+      <div class="wallpaper wallpaper-after"></div>
+    </div>
+  </section>
+
+  <section class="light" id="how-to-test">
+    <div class="content">
+      <h2>How to test</h2>
+      <div class="info-with-icon no1">
+        Power up the device to automatically initialise variables and establish Bluetooth connection
+      </div>
+      <div class="info-with-icon no2">
+        Populate the empty slots with the cylindrical cells you want to test
+      </div>
+      <div class="info-with-icon no3">
+        Toggle the switch to encode which slots are populated and click “OK” to start a pre-screening test
+      </div>
+      <div class="info-with-icon no4">
+        The pre-sceening test will tell you if any of the cells are completely depleted and will ask you to replace them, if you choose to. If you choose to replace any cells, then the pre-screening is re-run. If you do not replace any cells, you can press “OK” to proceed with testing.
+      </div>
+      <div class="info-with-icon no5">
+        Once the charge/discharge test is completed, the results will be displayed on the screen and will be stored on the removable SD
+      </div>
+      <div class="info-with-icon no6">
+        You can also connect to the device using the companion app to see your results, including detailed charts
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="content">
+      <a id="instagram" href="https://www.instagram.com/lifetimecambridge" title="Instagram"></a><a id="twitter" href="https://twitter.com/lifetimecamb" title="Twitter"></a><a id="linkedin" href="https://www.linkedin.com/" title="LinkedIn"></a><p>©&nbsp;Copyright&nbsp;2023 Lifetime Cambridge. All&nbsp;rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
