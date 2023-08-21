@@ -7,6 +7,9 @@ var software;
 var data;
 var howTo;
 var contact;
+var menuToggle;
+var navToggle;
+
 window.addEventListener('load', function (event) {
     header = document.getElementsByTagName('header')[0];
     footer = document.getElementsByTagName('footer')[0];
@@ -16,21 +19,42 @@ window.addEventListener('load', function (event) {
     data = document.getElementById('data-platform');
     howTo = document.getElementById('how-to-test');
     contact = document.getElementById('contact');
+
+    menuToggle = document.getElementById('menu-toggle');
+    menuToggle.addEventListener('click', function () {
+        toggleMenu();
+    });
+
+    navToggle = document.getElementById('nav-toggle');
+    navToggle.addEventListener('click', function () {
+        toggleMenu();
+    });
+
     window.addEventListener('scroll', function () {
         renderHeader();
     });
     renderHeader();
 });
+
+function toggleMenu() {
+    const marker = 'nav-open';
+    if (document.body.classList.contains(marker)) {
+        document.body.classList.remove(marker);
+    } else {
+        document.body.classList.add(marker);
+    }
+}
+
 function renderHeader() {
     if (window.scrollY > 100) {
         if (!headerCollapsed) {
-            header.classList.add('collapsed');
+            document.body.classList.add('collapsed');
             headerCollapsed = true;
         }
     }
     else {
         if (headerCollapsed) {
-            header.classList.remove('collapsed');
+            document.body.classList.remove('collapsed');
             headerCollapsed = false;
         }
     }

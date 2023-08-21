@@ -14,6 +14,11 @@ body {
 	color: #33393b;
 }
 
+body.nav-open {
+	overflow: hidden;
+	pointer-events: none;
+}
+
 p {
 	line-height: 1.5em;
 }
@@ -110,7 +115,7 @@ header {
 	background-color: transparent;
 }
 
-header.collapsed {
+body.collapsed header {
 	top: -45px;
 	height: 105px;
 	background-color: #363a32;
@@ -118,18 +123,21 @@ header.collapsed {
 }
 
 header div.content {
-	text-align: right;
+	margin-top: 44px;
+	display: grid;
+	grid-template-columns: 201px auto fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%);
+	grid-gap: 0px;
 }
 
 header div.content a#logo {
-	float: left;
-	margin: 44px 0 0 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 	transition-property: margin-top;
+	height: 63px;
 }
 
-header.collapsed div.content a#logo {
-	margin-top: 54px;
+body.collapsed header div.content a#logo {
+	margin-top: 10px;
 }
 
 header div.content a#logo img {
@@ -139,16 +147,16 @@ header div.content a#logo img {
 	transition-duration: 250ms;
 }
 
-header.collapsed div.content a#logo img {
+body.collapsed header div.content a#logo img {
 	height: 42px;
 	width: 134px;
 }
 
 header a {
-	margin: 50px 10px 0px 10px;
-	display: inline-block;
-	height: 51px;
-	line-height: 55px;
+	margin: 0px 10px 0px 10px;
+	display: block;
+	height: 57px;
+	line-height: 64px;
 	padding: 0px 4px;
 	background: transparent;
 	text-decoration: none;
@@ -156,18 +164,34 @@ header a {
 	font-weight: 400;
 }
 
-header > div.content > a.active {
+header > div.content a.active {
 	border-bottom-width: 4px;
 	border-bottom-style: solid;
 	border-bottom-color: #f1f5eb;
 }
 
-header > div.content > a:visited {
+header > div.content a:visited {
 	color: #fff;
 }
 
-@media (max-width: 650px) {
-	a#login {display: none;}
+a#menu-toggle {
+	display: none;
+	background-image: url('../images/menu.svg');
+	background-size: 48px 48px;
+	background-position: center 7px;
+	width: 48px;
+}
+
+@media (max-width: 780px) {
+	header div.content {
+		grid-template-columns: 201px auto fit-content(100%);
+	}
+	a.menu-item {
+		display: none;
+	}
+	a#menu-toggle {
+		display: block;
+	}
 }
 
 header div.content a:hover {
@@ -177,6 +201,56 @@ header div.content a:hover {
 
 header div.content a {
 	transition: color 250ms, border-color 250ms, background-color 250ms;
+}
+
+nav {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 100vw;
+	width: 100vw;
+	bottom: 0px;
+	z-index: 9999999;
+	overflow: hidden;
+	pointer-events: auto;
+	background-color: #363a32;
+	transition: left 250ms, opacity 250ms;
+	text-align: center;
+	padding-top: 150px;
+	opacity: 0;
+}
+
+body.nav-open nav {
+	left: 0px;
+	opacity: 1;
+}
+
+#nav-toggle {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 51px;
+	right: 64px;
+	background-image: url('../images/close.svg');
+	background-size: 48px 48px;
+	background-position: center center;
+}
+
+body.collapsed #nav-toggle {
+	top: 6px;
+}
+
+nav a {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 24px;
+	color: #fff;
+}
+
+nav a.active {
+	color: #30af59;
 }
 
 section#intro {
@@ -191,6 +265,10 @@ section#intro div.content {
 	padding: 190px 50px 120px 50px;
 }
 
+#intro a.btn {
+	margin-right: 0px;
+}
+
 .home section#intro div.content {
 	display: flex;
 	flex-wrap: wrap;
@@ -199,11 +277,20 @@ section#intro div.content {
 }
 
 section#intro div.description {
-	max-width: 50%;
+	max-width: 47%;
 }
 
 section#intro div.call-to-action {
 	text-align: center;
+}
+
+@media (max-width: 780px) {
+	section#intro div.call-to-action {
+		display: none;
+	}
+	section#intro div.description {
+		max-width: 100%;
+	}
 }
 
 lottie-player {
@@ -317,6 +404,18 @@ body section.all-center > div.content {
 
 #single-cell p {
 	padding-bottom: 16px;
+}
+
+div.img-div {
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0 auto;
+}
+
+#img-single-cell {
+	background-image: url('../images/single-damaged-cell.svg');
+	max-width: 706px;
+	aspect-ratio: 706/439;
 }
 
 #our-solution h2, #our-solution p {
@@ -568,7 +667,6 @@ footer p {
 	}
 }
 
-
 /* Impact page */
 
 .impact #intro .content {
@@ -611,12 +709,30 @@ footer p {
 	text-wrap: balance;
 }
 
+#img-circular {
+	background-image: url('../images/circular-economy.svg');
+	max-width: 800px;
+	aspect-ratio: 800/555;
+}
+
 #battery-capacity p {
 	padding-bottom: 30px;
 }
 
+#img-battery-capacity {
+	background-image: url('../images/battery-capacity.svg');
+	max-width: 760px;
+	aspect-ratio: 760/350;
+}
+
 #cell-grouping p {
 	padding-bottom: 40px;
+}
+
+#img-cell-grouping {
+	background-image: url('../images/cell-grouping.svg');
+	max-width: 860px;
+	aspect-ratio: 860/332;
 }
 
 #sustainability div.content {
@@ -811,6 +927,22 @@ a#un13 { background-image: url('../images/un13.svg'); }
 	width: 200px;
 	padding: 0;
 	margin: 0;
+}
+
+@media (max-width: 780px) {
+	#meet-the-team .wrapper {
+		max-width: 430px;
+		grid-template-columns: 200px 200px;
+		grid-column-gap: 15px;
+	}
+}
+
+@media (max-width: 460px) {
+	#meet-the-team .wrapper {
+		max-width: 200px;
+		grid-template-columns: 200px;
+		grid-column-gap: 0px;
+	}
 }
 
 #meet-the-team a * {

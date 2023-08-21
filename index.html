@@ -34,13 +34,24 @@
   <header>
     <div class="content">
       <a id="logo" href="index.html"><img src="images/lifetime-logo.svg" width="201" height="63" alt="Lifetime Cambridge"/></a>
-      <a id="home" class="active" href="index.html">Home</a>
-      <a id="impact" href="impact.html">Impact</a>
-      <a id="technology" href="tech.html">Technology</a>
-      <a id="people" href="people.html">People</a>
-      <a id="contact" href="contact.html">Contact</a>
+      <div></div>
+      <a id="home" class="menu-item active" href="index.html">Home</a>
+      <a id="impact" class="menu-item" href="impact.html">Impact</a>
+      <a id="technology" class="menu-item" href="tech.html">Technology</a>
+      <a id="people" class="menu-item" href="people.html">People</a>
+      <a id="contact" class="menu-item" href="contact.html">Contact</a>
+      <a id="menu-toggle" href="javascript:;"></a>
     </div>
   </header>
+
+  <nav>
+    <a class="active" href="index.html">Home</a>
+    <a href="impact.html">Impact</a>
+    <a href="tech.html">Technology</a>
+    <a href="people.html">People</a>
+    <a href="contact.html">Contact</a>
+    <a id="nav-toggle" href="javascript:;"></a>
+  </nav>
 
   <section id="intro">
     <div class="content">
@@ -74,7 +85,7 @@
     <div class="content">
       <h2>A single damaged cell can compromise the whole battery&#146;s performance</h2>
       <p>The problem is that robust, cost-effective technology for testing the state-of-health of cells is presently not easily available.</p>
-      <img src="images/single-damaged-cell.svg" width="706" height="439" alt="A single damaged cell can compromise the whole battery&#146;s performance"/>
+      <div id="img-single-cell" class="img-div"></div>
     </div>
   </section>
 
