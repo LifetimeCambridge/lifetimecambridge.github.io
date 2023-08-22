@@ -46,7 +46,10 @@ li {
 }
 
 a.btn {
-	display: inline-block;
+	display: block;
+	line-height: 1.5;
+	width: fit-content;
+	block-size: fit-content;
 	color: #fff;
 	font-size: 18px;
 	font-weight: 400;
@@ -291,6 +294,14 @@ section#intro div.call-to-action {
 	section#intro div.description {
 		max-width: 100%;
 	}
+	.home section#intro div.content {
+		padding-top: 160px;
+		padding-bottom: 50px;
+	}
+	.impact section#intro div.content {
+		padding-top: 180px;
+		padding-bottom: 30px;
+	}
 }
 
 lottie-player {
@@ -311,18 +322,21 @@ section#intro h1 {
 	text-shadow: 0px 0px 10px #363a32;
 }
 
-@media (max-width: 650px) {
-	section#intro h1 {
-		font-size: 28px;
-	}
-}
-
 section#intro p {
 	margin-top: 10px;
 	font-size: 26px;
 	line-height: 1.75em;
 	font-weight: 300;
 	text-shadow: 0px 0px 10px #363a32;
+}
+
+@media (max-width: 650px) {
+	section#intro h1 {
+		font-size: 28px;
+	}
+	section#intro p {
+		font-size: 20px;
+	}
 }
 
 section.section-with-image div.content {
@@ -349,15 +363,8 @@ section.section-with-image div.content > div {
 }
 
 section.section-with-image h2, section.partners h2, section#contact h2 {
-	font-size: 24px;
 	padding: 0px 0px 10px 0px;
 	margin: 0;
-}
-
-@media (max-width: 650px) {
-	section.section-with-image h2, section.partners h2, section#contact h2 {
-		font-size: 24px;
-	}
 }
 
 section.light {
@@ -435,6 +442,24 @@ div.img-div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@media (max-width: 900px) {
+	#our-solution .columns {
+		grid-template-columns: 1fr 1fr;
+	}
+	#our-solution .columns div .preview {
+		aspect-ratio: 2/1;
+	}
+}
+
+@media (max-width: 650px) {
+	#our-solution .columns {
+		grid-template-columns: 1fr;
+	}
+	#our-solution .columns div .preview {
+		aspect-ratio: 2/1;
+	}
 }
 
 #our-solution .hardware .preview {
@@ -685,6 +710,14 @@ footer p {
 	background-repeat: no-repeat;
 }
 
+
+@media (max-width: 780px) {
+	.info-with-icon, address {
+		padding: 4px 10px 25px 94px;
+		font-size: 18px;
+	}
+}
+
 .impact #intro .wrapper {
 	padding: 30px 0 0 0;
 	margin: 0 auto;
@@ -737,6 +770,7 @@ footer p {
 
 #sustainability div.content {
 	text-align: center;
+	padding-bottom: 25px;
 }
 
 #sustainability h2 {
@@ -749,7 +783,7 @@ footer p {
 	aspect-ratio: 1/1;
 	background-size: cover;
 	padding: 0;
-	margin: 0 15px;
+	margin: 0 15px 25px 15px;
 	filter: saturate(0);
 	box-shadow: 0 0px 0px rgba(0,0,0,0.19), 0 0px 0px rgba(0,0,0,0.23);
 	transition: filter 200ms, box-shadow 200ms, transform 200ms;
@@ -820,6 +854,10 @@ a#un13 { background-image: url('../images/un13.svg'); }
 
 .technology section p {
 	padding-bottom: 20px;
+}
+
+.technology #software a.btn {
+	display: inline-block
 }
 
 #hardware .wallpaper {
