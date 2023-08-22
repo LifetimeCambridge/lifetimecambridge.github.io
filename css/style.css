@@ -758,6 +758,11 @@ footer p {
 	aspect-ratio: 760/350;
 }
 
+#battery-capacity #drax {
+	padding: 24px 0 0 0;
+	opacity: 0.5;
+}
+
 #cell-grouping p {
 	padding-bottom: 40px;
 }
