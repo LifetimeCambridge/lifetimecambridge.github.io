@@ -1009,22 +1009,13 @@ a#jieni div { background-image: url('../images/people-jieni.webp'); }
 a#jasper div { background-image: url('../images/people-jasper.webp'); }
 a#melissa div { background-image: url('../images/people-melissa.webp'); }
 
-a#logo-weee {
-	background-image: url('../images/logo-weee.png');
-	background-size: 200px auto;
-	background-position: center center;
-}
-
-a#logo-strathmore {
-	background-image: url('../images/logo-strathmore.png');
-	background-size: 200px auto;
-	background-position: center center;
-}
-
 a#logo-cling { background-image: url('../images/logo-cling.svg'); }
 a#logo-roam { background-image: url('../images/logo-roam.svg'); }
 a#logo-about { background-image: url('../images/logo-about.svg'); }
 a#logo-kebs { background-image: url('../images/logo-kebs.svg'); }
+a#logo-tryke { background-image: url('../images/logo-tryke.svg'); }
+a#logo-weee { background-image: url('../images/logo-weee.png'); }
+a#logo-strathmore { background-image: url('../images/logo-strathmore.png'); }
 
 /* Contact page */
 
