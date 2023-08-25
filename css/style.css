@@ -259,7 +259,7 @@ nav a.active {
 section#intro {
 	background-image: url('../images/section-intro.webp');
 	background-size: cover;
-	background-position: center center;
+	background-position: top center;
 	color: #fff;
 	text-align: center;
 }
