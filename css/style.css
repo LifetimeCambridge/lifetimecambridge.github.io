@@ -957,10 +957,11 @@ a#un13 { background-image: url('../images/un13.svg'); }
 }
 
 #meet-the-team .wrapper {
-	max-width: 660px;
-	display: grid;
-	grid-template-columns: 200px 200px 200px;
-	grid-column-gap: 30px;
+	max-width: 880px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-around;
 	margin: 0 auto;
 }
 
@@ -969,7 +970,7 @@ a#un13 { background-image: url('../images/un13.svg'); }
 	position: relative;
 	width: 200px;
 	padding: 0;
-	margin: 0;
+	margin: 10px;
 }
 
 @media (max-width: 780px) {
@@ -999,9 +1000,8 @@ a#un13 { background-image: url('../images/un13.svg'); }
 	background-color: transparent;
 	background-position-y: 0px;
 	box-shadow: 0 0px 0px rgba(0,0,0,0.19), 0 0px 0px rgba(0,0,0,0.23);
-	filter: saturate(0.5) brightness(1.05);
+	filter: saturate(1) brightness(1);
 	transition: filter 200ms, box-shadow 200ms, transform 200ms, opacity 200ms;
-	opacity: 0.9;
 }
 
 #meet-the-team a:hover div.picture {
