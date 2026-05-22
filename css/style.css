@@ -957,7 +957,7 @@ a#un13 { background-image: url('../images/un13.svg'); }
 }
 
 #meet-the-team .wrapper {
-	max-width: 880px;
+	max-width: 680px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -1042,13 +1042,9 @@ a#un13 { background-image: url('../images/un13.svg'); }
 	transform: scale(1.05) rotate(1deg) translate(30px, 5px);
 }
 
-a#aparna div { background-image: url('../images/people-aparna.webp'); }
 a#eleni div { background-image: url('../images/people-eleni.webp'); }
-a#tom div { background-image: url('../images/people-tom.webp'); }
 a#rob div { background-image: url('../images/people-rob.webp'); }
-a#alec div { background-image: url('../images/people-alec.webp'); }
 a#nic div { background-image: url('../images/people-nic.webp'); }
-a#jieni div { background-image: url('../images/people-jieni.webp'); }
 a#jasper div { background-image: url('../images/people-jasper.webp'); }
 a#melissa div { background-image: url('../images/people-melissa.webp'); }
 
